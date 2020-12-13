@@ -1,8 +1,8 @@
 /**
  * Created by josh on 5/13/17.
  */
-var test = require('tape');
-var compareUnit = require('./common').compareUnit;
+import test from "tape"
+import {compareUnit} from "./common.js"
 
 test("duration units", function(t) {
     compareUnit(t,'3hr',3,'hours');

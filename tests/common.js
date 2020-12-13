@@ -28,7 +28,7 @@ export function compareUnit(t, str, num, unit, dim) {
 
 }
 
-function compareComplexUnit(t,str,ans) {
+export function compareComplexUnit(t,str,ans) {
     let res = Parser.parseString(str);
     t.approximately(res.getValue(),ans.getValue(), 0.5);
     if(!res.equalUnits(ans)) {
@@ -38,8 +38,3 @@ function compareComplexUnit(t,str,ans) {
     }
     t.equal(res.equalUnits(ans), true);
 }
-
-// module.exports = {
-//     compareUnit: compareUnit,
-//     compareComplexUnit: compareComplexUnit,
-// };

@@ -1,8 +1,9 @@
 /**
  * Created by josh on 5/13/17.
  */
-var test = require('tape');
-var compareUnit = require('./common').compareUnit;
+import test from "tape"
+import {compareUnit} from "./common.js"
+
 test("length units", function(t) {
     compareUnit(t,'40m',40,'meter');
     compareUnit(t,'40km',40,'kilometer');

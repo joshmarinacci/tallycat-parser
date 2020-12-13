@@ -1,9 +1,10 @@
 /**
  * Created by josh on 5/16/17.
  */
-var test = require('tape');
-var compareComplexUnit = require('./common').compareComplexUnit;
-var LiteralNumber = require('../src/LiteralNumber').LiteralNumber;
+
+import test from "tape"
+import {compareComplexUnit} from "./common.js"
+import {LiteralNumber} from "../src/literalnumber.js"
 
 
 test("complex units",(t)=>{

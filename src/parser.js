@@ -1,11 +1,8 @@
 import ohm from "ohm-js"
 import {LiteralNumber} from "./literalnumber.js"
-// var ohm = require('ohm-js');
-// var LiteralString = require('./LiteralString').LiteralString;
-// var UNITS = require('./units2');
+import {LiteralString} from "./literalstring.js"
 import {UNITS} from "./units.js";
 // var moment = require('moment');
-// var LiteralNumber = require('./LiteralNumber').LiteralNumber;
 
 import fs from "fs"
 

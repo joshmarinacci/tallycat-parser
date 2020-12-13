@@ -2,8 +2,9 @@
  * Created by josh on 5/13/17.
  */
 
-var test = require('tape');
-var compareUnit = require('./common').compareUnit;
+import test from "tape"
+import {compareUnit} from "./common.js"
+
 test("mass units", function(t) {
     compareUnit(t,"50g",50,'gram');
     compareUnit(t,"50kg", 50,'kilograms');

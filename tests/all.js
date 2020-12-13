@@ -1,11 +1,11 @@
 console.log("running all tests");
 
-require('./simple.js');
-require('./parsing-old');
-require('./area');
-require('./duration');
-require('./length');
-require('./mass');
-require('./volume');
-require('./complex');
+import "./simple.js"
+// require('./parsing-old');
+import "./area.js"
+import "./duration.js"
+import "./length.js"
+import "./mass.js"
+import "./volume.js"
+import "./complex.js"
 //require('temperature');

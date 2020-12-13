@@ -1,8 +1,9 @@
+import test from "tape"
+import {compareUnit} from "./common.js"
+
 /**
  * Created by josh on 5/13/17.
  */
-var test = require('tape');
-var compareUnit = require('./common').compareUnit;
 
 test("area units", function(t) {
     compareUnit(t,'8ft^2',8,'foot',2);

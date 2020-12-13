@@ -2,7 +2,6 @@
  * Created by josh on 5/26/17.
  */
 import {UNITS} from "./units.js"
-// var UNITS = require('./units2');
 
 function crossFind(ar1, ar2, cb) {
     for(let i=0; i<ar1.length; i++) {
