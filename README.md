@@ -27,5 +27,16 @@ console.log(result.toString())
 // prints Literal 24 1*foot^1 / 
 ```
 
-`Parser.parseString` returns a `LiteralNumber` object. To get the numeric value call 'getValue()'
+`Parser.parseString` returns a `LiteralNumber` object. To get the numeric value call `getValue()`. To print the rest of the structure call:
+
+```javascript
+console.log(result.getValue())
+result._numers.forEach(n => {
+    console.log(n.getName(),n.getDimension(),n.getFactor())
+})
+result._denoms.forEach(n => {
+    console.log(n.getName(),n.getDimension(),n.getFactor())
+})
+
+```
 
