@@ -5,6 +5,7 @@ import {UNITS} from "./units.js";
 // var moment = require('moment');
 
 import fs from "fs"
+import path from "path"
 
 class FunCall {
     constructor(fun, arg) {
@@ -165,8 +166,7 @@ function init() {
             sem = generateSemantics(grammar);
         });
     } else {
-        // var fs = require('fs');
-        source = fs.readFileSync("src/parser.ohm");
+        source = fs.readFileSync(new URL('./parser.ohm', import.meta.url));
         grammar = ohm.grammar(source);
         sem = generateSemantics(grammar);
     }
