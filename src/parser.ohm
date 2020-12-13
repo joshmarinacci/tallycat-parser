@@ -1,0 +1,32 @@
+BrainShell {
+	Expr    = FunCall | AsExpr | AddExpr | Symbol | String
+	AsExpr = Expr "as" Unit
+	AddExpr = AddExpr "+" MulExpr --plus
+            | AddExpr "-" MulExpr --minus
+            | MulExpr
+	MulExpr = MulExpr "*" ExpExpr --multiply
+		    | MulExpr "/" ExpExpr --divide
+		    | ExpExpr
+	ExpExpr = ExpExpr "^" ExpExpr -- power
+	    | PriExpr
+	PriExpr = "(" Expr ")" --paren
+		| Literal
+		| Symbol
+    Literal = Number Unit?
+	Number = hex | percent | float | integer
+	hex = "0x" hexDigit+
+	float = (digit|"_")+ "." digit+ exp?
+	exp = "e" "-"? digit+
+	integer = (digit|"_")+ exp?
+	percent = (float|integer) "%"
+	Unit =  unitmodifier? unitchunk ("/" unitchunk)?
+	unitchunk = (~"as" letter+) ("^" digit+)?
+	unitmodifier = "square" | "cubic"
+	FunCall = identifier "(" Expr ")"
+	Symbol = identifier
+	identifier = letter (letter | digit | "." | "_")+
+	String = q (~q any)+ q    -- single
+	       | qq (~qq any)+ qq -- double
+	q = "'"
+	qq = "\""
+}
